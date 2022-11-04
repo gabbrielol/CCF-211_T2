@@ -25,9 +25,10 @@ int valida_pbn(int size, int matriz[size][size]) {
 
     // Declaração de variáveis inteiras contadores para auxiliar
     // no processo de análise dos arranjos.
+    int num_arranjo; num_arranjo = 0;
     int cont_true; cont_true = 0;
     int cont_false; cont_false = 0;
-    int cont_total; cont_total = 0;
+    int erro;
 
     // O código começa recebendo o conjunto de entrada (in_color) e do r (size). 
     // O conjunto pode ser uma string qualquer e o r deve ser um inteiro 
@@ -62,33 +63,47 @@ int valida_pbn(int size, int matriz[size][size]) {
     // Termina quando a última posição do vetor for 1.
     while (num[r] == 0) {
         for (i = 0; i < n; i++) {
+
             // Processo de mapeamento.
             for (j = 0, k = r - 1; j < r; j++) {
                 string[k] = in_color[num[j]];
                 k--;
             }
-            // Mostra o resultado.
-            string[r] = 0;
-            printf("%s\n\n", string);
 
-            // Realiza a verificação para analisar se o arranjo é válido ou inválido
+            // Verificar se o arranjo é válido.
+            erro = 0;
             for (m = 0; m < size; m++) {
                 for (o = 0; o < size; o++) {
                     if (matriz[m][o] == 1) {
                         if (string[m] == string[o]) {
-                            cont_false++;
-                            break;
+                            erro = 1;
                         }
                     }
                 }
             }
-            if (cont_false != 0) {
+
+            // Mostra o resultado.
+            string[r] = 0;
+
+            // Arranjo válido    
+            if (erro == 0) {
+                printf("Arranjo [%d] válido: %s\n\n", num_arranjo, string);
                 cont_true++;
             }
+
+            // Arranjo inválido
+            if (erro == 1) {
+                printf("Arranjo [%d] inválido: %s\n\n", num_arranjo, string);
+                cont_false++;
+            }
+
             // Incrementa o algarismo menos significativo.
             num[0]++;
-            cont_total++;
+
+            // Incrementa número de arranjos
+            num_arranjo++;
         }
+
         // Muda de "casa" e lança os vai uns. 
         for (i = 0; i < r; i++) {
             if (num[i] == n) {
@@ -99,8 +114,8 @@ int valida_pbn(int size, int matriz[size][size]) {
     }
 
     // Exibe o número de arranjos válidos e inválidos
-    printf("Arranjos válidos: %d\n", cont_total - cont_true);
-    printf("Arranjos inválidos: %d\n", cont_true);
+    printf("Arranjos válidos: %d\n", cont_true);
+    printf("Arranjos inválidos: %d\n", cont_false);
 
     return 0;
 }

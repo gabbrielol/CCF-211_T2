@@ -9,6 +9,7 @@
 
 // ./entradas/entrada_I.txt
 // ./entradas/entrada_II.txt
+// ./entradas/entrada_III.txt
 
 int main() {
     char file_name[100]; // Variável que recebe o nome do arquivo para ser lido
