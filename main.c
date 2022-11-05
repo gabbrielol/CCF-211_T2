@@ -9,7 +9,7 @@
 
 // ./entradas/entrada_I.txt
 // ./entradas/entrada_II.txt
-// ./entradas/entrada_III.txt
+// ./entradas/entrada_teste.txt
 
 int main() {
     char file_name[100]; // Variável que recebe o nome do arquivo para ser lido
@@ -28,7 +28,8 @@ int main() {
         printf("1. Gerar arranjos separadamente\n"); // Gera arranjos de N cores, tomados P a P
         printf("2. Gerar tabela de adjacências\n"); // Gera a tabela/matriz de adjacências
         printf("3. Verificar PBN\n"); // Verifica arranjos válidos e inválidos para o PBN a partir da matriz de adjacências
-        printf("4. Sair do programa\n"); // Encerra o programa
+        printf("4. Instruções\n");
+        printf("5. Sair do programa\n"); // Encerra o programa
         printf("-----------------------------------------------------------------------\n");
         printf("Opção desejada: "); scanf("%d", &option);
         system("cls || clear");
@@ -125,7 +126,18 @@ int main() {
             }
         case 4 :
             {
+            printf("Modo instruções escolhido!\n\n");
+
+            printf("Instruções:\n");
+            printf("Passo 1 - Inserir o destino do arquivo de entrada para gerar a matriz de adjacências (2)\n");
+            printf("Passo 2 - Verificar possíveis soluções para o PBN com base na matriz de adjacências (3)\n");
+            
+            break;
+            }
+        case 5 :
+            {
             loop = 0;
+
             break;
             }
         default:
