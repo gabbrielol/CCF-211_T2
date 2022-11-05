@@ -57,6 +57,7 @@ int gerar_arranjo(char *in_color, int size) {
                 string[k] = in_color[num[j]];
                 k--;
             }
+
             // Mostra o resultado.
             string[r] = 0;
             printf("%s\n\n", string);
@@ -64,6 +65,7 @@ int gerar_arranjo(char *in_color, int size) {
             // Incrementa o algarismo menos significativo.
             num[0]++;
         }
+
         // Muda de "casa" e lança os vai uns. 
         for (i = 0; i < r; i++) {
             if (num[i] == n) {
@@ -72,5 +74,6 @@ int gerar_arranjo(char *in_color, int size) {
             }
         }
     }
-    return 0 ;
+
+    return 0;
 }

@@ -30,7 +30,7 @@ int get_size_arvore_natal(char *file_name) {
                 break;
             case '\n' :
                 linha++;
-            default:
+            default :
                 break;
         }
     } while (caractere_texto != EOF);

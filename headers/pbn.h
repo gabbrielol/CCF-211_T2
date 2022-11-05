@@ -63,13 +63,11 @@ int valida_pbn(int size, int matriz[size][size]) {
     // Termina quando a última posição do vetor for 1.
     while (num[r] == 0) {
         for (i = 0; i < n; i++) {
-
             // Processo de mapeamento.
             for (j = 0, k = r - 1; j < r; j++) {
                 string[k] = in_color[num[j]];
                 k--;
             }
-
             // Verificar se o arranjo é válido.
             erro = 0;
             for (m = 0; m < size; m++) {
@@ -84,14 +82,13 @@ int valida_pbn(int size, int matriz[size][size]) {
 
             // Mostra o resultado.
             string[r] = 0;
-
-            // Arranjo válido    
+            
+            // Arranjo válido.    
             if (erro == 0) {
                 printf("Arranjo [%d] válido: %s\n\n", num_arranjo, string);
                 cont_true++;
             }
-
-            // Arranjo inválido
+            // Arranjo inválido.
             if (erro == 1) {
                 printf("Arranjo [%d] inválido: %s\n\n", num_arranjo, string);
                 cont_false++;
@@ -100,7 +97,7 @@ int valida_pbn(int size, int matriz[size][size]) {
             // Incrementa o algarismo menos significativo.
             num[0]++;
 
-            // Incrementa número de arranjos
+            // Incrementa número de arranjos.
             num_arranjo++;
         }
 
