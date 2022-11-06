@@ -22,7 +22,7 @@ int main() {
     // Implementação do menu
     while (loop) {
         // Operações disponíveis no menu
-        printf("\n-------------------- PROBLEMA DAS BOLINHA DE NATAL --------------------\n");
+        printf("\n-------------------- PROBLEMA DAS BOLINHAS DE NATAL --------------------\n");
         printf("\n     -------------------- COLORAÇÃO DE GRAFOS --------------------\n");
         printf("Escolha um modo:\n");
         printf("1. Gerar arranjos separadamente\n"); // Gera arranjos de N cores, tomados P a P

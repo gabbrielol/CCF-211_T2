@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Função que gera os arranjos de acorodo com as cores e o tamanho
+// Função que gera os arranjos de acordo com as cores e o tamanho
 // e realiza a análise de possíveis soluções para o PBN
 // Crédito:
 // Marcos Paulo Ferreira (Daemonio)

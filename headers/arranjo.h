@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Função que gera os arranjos de acorodo com as cores e o tamanho
+// Função que gera os arranjos de acordo com as cores e o tamanho
 // Crédito:
 // Marcos Paulo Ferreira (Daemonio)
 // https://daemoniolabs.wordpress.com
