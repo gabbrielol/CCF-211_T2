@@ -28,7 +28,7 @@ int main() {
         printf("1. Gerar arranjos separadamente\n"); // Gera arranjos de N cores, tomados P a P
         printf("2. Gerar tabela de adjacências\n"); // Gera a tabela/matriz de adjacências
         printf("3. Verificar PBN\n"); // Verifica arranjos válidos e inválidos para o PBN a partir da matriz de adjacências
-        printf("4. Instruções\n");
+        printf("4. Instruções\n"); // Breves instruções de como utilizar o programa
         printf("5. Sair do programa\n"); // Encerra o programa
         printf("-----------------------------------------------------------------------\n");
         printf("Opção desejada: "); scanf("%d", &option);

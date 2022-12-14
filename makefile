@@ -1,3 +1,3 @@
 all:
-	gcc main.c -o e
+	gcc main.c sources/arranjo.c sources/entrada.c sources/pbn.c -o e
 	./e
